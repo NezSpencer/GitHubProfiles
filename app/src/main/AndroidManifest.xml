@@ -2,19 +2,54 @@
 <manifest package="com.nezspencer.githubprofiles"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
     <application
+            android:name=".MyApplication"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
+        </activity>
+
+        <activity android:name=".authentication.SigninActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity
+                android:name="com.auth0.android.lock.LockActivity"
+                android:label="@string/app_name"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait"
+                android:theme="@style/Lock.Theme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                        android:host="eddyspencer.auth0.com"
+                        android:pathPrefix="/android/com.nezspencer.githubprofiles/callback"
+                        android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <meta-data android:name="com.auth0.lock.client-id" android:value="@string/auth0_client_id"/>
+        <meta-data android:name="com.auth0.lock.domain-url" android:value="@string/auth0_domain"/>
+        <activity
+                android:name="com.auth0.android.provider.WebAuthActivity"/>
+
     </application>
 
 </manifest>

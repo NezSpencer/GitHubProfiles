@@ -1,8 +1,31 @@
 package com.nezspencer.githubprofiles.api;
 
-/**
- * Created by nezspencer on 3/8/17.
- */
+public class Token {
+    private String access_token;
+    private String scope;
+    private String token_type;
 
-class Token {
+    public String getAccess_token() {
+        return this.access_token;
+    }
+
+    public void setAccess_token(String access_token) {
+        this.access_token = access_token;
+    }
+
+    public String getScope() {
+        return this.scope;
+    }
+
+    public void setScope(String scope) {
+        this.scope = scope;
+    }
+
+    public String getToken_type() {
+        return this.token_type;
+    }
+
+    public void setToken_type(String token_type) {
+        this.token_type = token_type;
+    }
 }

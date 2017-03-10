@@ -17,22 +17,22 @@
             android:layout_height="wrap_content">
        
         <RelativeLayout
-                android:id="@+id/list_item_layout"
+                android:id="@+id/profileitem_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
            
             <ImageView
-                    android:id="@+id/image_thumb"
+                    android:id="@+id/profileitem_image_thumb"
                     android:layout_width="100dp"
                     android:scaleType="centerCrop"
                     android:layout_height="100dp"/>
             
             <TextView
-                    android:id="@+id/profile_username"
+                    android:id="@+id/profileitem_username"
                     android:layout_width="wrap_content"
                     android:textSize="?attr/textAppearanceListItem"
-                    android:layout_toRightOf="@+id/image_thumb"
-                    android:layout_toEndOf="@+id/image_thumb"
+                    android:layout_toRightOf="@+id/profileitem_image_thumb"
+                    android:layout_toEndOf="@+id/profileitem_image_thumb"
                     android:layout_margin="10dp"
                     android:layout_height="wrap_content"/>
             
