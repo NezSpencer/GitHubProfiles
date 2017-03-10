@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1036741025516",
+    "firebase_url": "https://githubprofiles-4fd3f.firebaseio.com",
+    "project_id": "githubprofiles-4fd3f",
+    "storage_bucket": "githubprofiles-4fd3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036741025516:android:13ba4b092927d16a",
+        "android_client_info": {
+          "package_name": "com.nezspencer.githubprofiles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036741025516-1aiv5lu0kj30je1qi5rgi7c42lj97u3f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nezspencer.githubprofiles",
+            "certificate_hash": "fba18d75d530ce1fdaa22dcb9d03d4a1ba45aadc"
+          }
+        },
+        {
+          "client_id": "1036741025516-bjo95qe45enalj970a42ji9r7ict64oq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBngv_ZP4ECElRQ0jDEurwJv19_dmdULj8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036741025516-bjo95qe45enalj970a42ji9r7ict64oq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
