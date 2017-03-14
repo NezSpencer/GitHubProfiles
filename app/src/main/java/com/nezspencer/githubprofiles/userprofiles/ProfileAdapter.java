@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -15,6 +14,8 @@ import com.nezspencer.githubprofiles.R;
 import com.nezspencer.githubprofiles.api.UserResponseItems;
 
 import java.util.List;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by nezspencer on 3/5/17.
@@ -73,13 +74,13 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileH
     class ProfileHolder extends RecyclerView.ViewHolder{
         TextView usernameView;
         RelativeLayout itemLayout;
-        ImageView userImageThumbnail;
+        CircleImageView userImageThumbnail;
         UserResponseItems profileData;
 
         public ProfileHolder(View itemView) {
             super(itemView);
             usernameView = (TextView)itemView.findViewById(R.id.profileitem_username);
-            userImageThumbnail=(ImageView)itemView.findViewById(R.id.profileitem_image_thumb);
+            userImageThumbnail=(CircleImageView) itemView.findViewById(R.id.profileitem_image_thumb);
             itemLayout=(RelativeLayout)itemView.findViewById(R.id.profileitem_layout);
         }
 

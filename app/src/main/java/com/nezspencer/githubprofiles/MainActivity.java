@@ -2,7 +2,6 @@ package com.nezspencer.githubprofiles;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
@@ -25,9 +24,6 @@ public class MainActivity extends AppCompatActivity {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         else
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-        String auth= PreferenceManager.getDefaultSharedPreferences(this)
-                .getString(Constants.KEY_AUTH,null);
 
 
         /*if (auth==null)

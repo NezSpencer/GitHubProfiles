@@ -41,6 +41,7 @@ public class SigninActivity extends AppCompatActivity {
             public void onAuthentication(Credentials credentials) {
                 saveToSharedPreferences(credentials.getAccessToken());
                 Log.e("EDONE ",credentials.getAccessToken());
+
                 startActivity(new Intent(SigninActivity.this, MainActivity.class));
             }
 

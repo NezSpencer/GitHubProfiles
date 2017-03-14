@@ -1,27 +1,12 @@
-<android.support.design.widget.CoordinatorLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#E0e0e0"
         android:fitsSystemWindows="true"
         tools:ignore="MergeRootFrame">
-
-    <android.support.design.widget.AppBarLayout
-            android:id="@+id/app_bar"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/app_bar_height"
-            android:fitsSystemWindows="true"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-        <android.support.design.widget.CollapsingToolbarLayout
-                android:id="@+id/toolbar_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fitsSystemWindows="true"
-                app:contentScrim="?attr/colorPrimary"
-                app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
-                app:toolbarId="@+id/toolbar">
 
             <android.support.v7.widget.Toolbar
                     android:id="@+id/detail_toolbar"
@@ -30,14 +15,13 @@
                     app:layout_collapseMode="pin"
                     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-        </android.support.design.widget.CollapsingToolbarLayout>
 
-    </android.support.design.widget.AppBarLayout>
 
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_height="wrap_content">
 
         <View android:layout_width="0dp"
@@ -49,7 +33,7 @@
                 app:cardElevation="5dp"
                 app:cardCornerRadius="2dp"
                 android:layout_width="0dp"
-                android:layout_weight="2"
+                android:layout_weight="4"
                 android:layout_height="wrap_content">
 
             <android.support.v4.widget.SwipeRefreshLayout
@@ -78,4 +62,4 @@
 
 
 
-</android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

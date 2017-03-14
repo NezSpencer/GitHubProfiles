@@ -13,8 +13,10 @@ import rx.Subscription;
 public interface InterfaceProfileList {
 
     void refreshAdapter(List<UserResponseItems> items);
+    void addToAdapterList(List<UserResponseItems> items);
     void showLoadingProgress();
     void stopLoadingProgress();
     void showErrorMessage(String message);
+    void onLoadSuccessful();
     void getCurrentSubscription(Subscription subscription);
 }
