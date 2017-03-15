@@ -78,11 +78,14 @@ public class ProfileListPresenter {
                 })
                 .subscribe(profileListObserver);*/
 
+        Log.e("Error", " loading data page"+currentPage);
+
        retrofit.create(GithubApi.class).getGitHubUsers(""+currentPage)
                .enqueue(new Callback<UserResponse>() {
            @Override
            public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
 
+               Log.e("success1",Arrays.toString(response.body().getItems()));
                profileListInterface.stopLoadingProgress();
                if (currentPage==1)
                profileListInterface.refreshAdapter(Arrays.asList(response.body().getItems()));
@@ -90,6 +93,7 @@ public class ProfileListPresenter {
                {
                    profileListInterface.addToAdapterList(Arrays.asList(response.body().getItems()));
                    profileListInterface.onLoadSuccessful();
+                   Log.e("success check",Arrays.toString(response.body().getItems()));
                }
            }
 

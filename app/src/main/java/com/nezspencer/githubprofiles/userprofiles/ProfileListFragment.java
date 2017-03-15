@@ -61,7 +61,7 @@ public class ProfileListFragment extends Fragment implements InterfaceProfileLis
         /*oauTH= PreferenceManager.getDefaultSharedPreferences(getActivity())
                 .getString(Constants.KEY_AUTH,"none");*/
         initializeAdapter();
-        presenter.fetchUserData("user","lagos","java",oauTH,0);
+        presenter.fetchUserData("user","lagos","java",oauTH,1);
         return view;
     }
 
@@ -104,9 +104,11 @@ public class ProfileListFragment extends Fragment implements InterfaceProfileLis
 
                         Log.i("Yaeye!", "end called");
 
-                        int page=pageToLoad+1;
+                        /*int page=pageToLoad+1;
+                        Log.e("checker", " "+page);*/
+                        Log.e("checker", " "+pageToLoad);
                         // Do something
-                        presenter.fetchUserData("user","lagos","java",oauTH,page);
+                        presenter.fetchUserData("user","lagos","java",oauTH,pageToLoad);
                         loading = true;
                     }
                 }
@@ -143,6 +145,7 @@ public class ProfileListFragment extends Fragment implements InterfaceProfileLis
     @Override
     public void showLoadingProgress() {
         refreshLayout.setRefreshing(true);
+        Log.e("List size start"," "+profileAdapter.getItemCount());
     }
 
     @Override
@@ -159,6 +162,7 @@ public class ProfileListFragment extends Fragment implements InterfaceProfileLis
     @Override
     public void onLoadSuccessful() {
         pageToLoad++;
+        Log.e("List size end"," "+profileAdapter.getItemCount());
     }
 
     @Override

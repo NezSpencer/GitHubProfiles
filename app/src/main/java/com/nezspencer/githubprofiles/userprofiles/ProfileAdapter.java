@@ -66,6 +66,7 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileH
         notifyDataSetChanged();
     }
 
+
     @Override
     public int getItemCount() {
         return profileList.size();
