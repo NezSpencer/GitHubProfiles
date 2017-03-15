@@ -2,6 +2,7 @@ package com.nezspencer.githubprofiles.userprofiles;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatDialogFragment;
@@ -60,9 +61,12 @@ public class DetailDialogFragment extends AppCompatDialogFragment {
         Glide.with(getActivity()).load(profileData.getAvatar_url())
                 .into(userImage);
 
+        profileLink.setTypeface(Typeface.createFromAsset(getActivity().getAssets(),"Roboto-Medium.ttf"));
+        username.setTypeface(Typeface.createFromAsset(getActivity().getAssets(),"Roboto-Medium.ttf"));
+
         profileLink.setText(profileData.getUrl());
         username.setText(profileData.getLogin());
-
+        shareButton.setTypeface(Typeface.createFromAsset(getActivity().getAssets(),"Roboto-Medium.ttf"));
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

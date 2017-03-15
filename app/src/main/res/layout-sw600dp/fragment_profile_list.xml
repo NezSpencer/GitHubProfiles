@@ -8,15 +8,6 @@
         android:fitsSystemWindows="true"
         tools:ignore="MergeRootFrame">
 
-            <android.support.v7.widget.Toolbar
-                    android:id="@+id/detail_toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    app:layout_collapseMode="pin"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
-
-
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"

@@ -10,14 +10,6 @@
 
 
 
-            <android.support.v7.widget.Toolbar
-                    android:id="@+id/detail_toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    app:layout_collapseMode="pin"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
-
     <android.support.v4.widget.SwipeRefreshLayout
             android:id="@+id/profilelist_refresh"
             android:layout_width="match_parent"
